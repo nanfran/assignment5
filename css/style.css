@@ -1,0 +1,144 @@
+/*
+File: style.css
+GUI Assignment: One-Line Scrabble with Drag-and-Drop
+Nancy Vi, UMass Lowell Computer Science, Nancy_Vi@student.uml.edu
+Copyright (c) 2025 by Nancy. All rights reserved.
+Description: This is the css file for assignment 5. Contains the style/formatting
+specifics for elements in index.html
+Updated by NV on December 17, 2025 at 11:59 PM
+*/
+
+body {
+    font-family: Arial;
+    background-color: #1c3253;
+    margin: 20px;
+}
+
+header {
+    color: #d5ebff;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 10px auto; 
+}
+
+/*Ensures game aspects are centered and same length*/
+#controls, #scrabble-board, #tile-rack {
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+}
+
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 75px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #d5ebff;
+}
+
+#current-score, #total-score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 10px;
+    background-color: #0084ff;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+
+}
+
+/*Board and rack styling, ensures it's conststent across both attributes*/
+#scrabble-board, #tile-rack {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    align-items: center;
+    margin-bottom: 50px;
+    min-height: 70px; 
+}
+
+/*Adds rack graphic here*/
+#tile-rack {
+    background-image: url('../graphics_data/scrabble-tile-holder-406774_640.png');
+    background-size: 100% 100%;
+    overflow: visible !important;
+    overflow-x: auto; 
+    
+}
+
+#scrabble-board {
+    background-image: none;
+    background-color: #d5ebff;
+}
+
+/* Game board square styling */
+.board-square {
+    width: 60px;
+    height: 60px;
+    font-size: 0.75em;
+    text-align: center;
+    color: #424242;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #e6d8c1; 
+}
+
+.board-square span {
+    text-align: center;
+    padding: 0 2px;
+}
+
+/* Speacial square styling*/
+.DL {
+    background-color: #98d6ec; 
+}
+
+.DW {
+    background-color: #eb9999;
+}
+
+/* Letter tiles styling/draggable attributes */
+.tile {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    position: relative;
+}
+
+.tile-image {
+    width: 100%; 
+    height: 100%;
+    pointer-events: none; 
+}
+
+.tile-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: transparent; 
+    visibility: hidden;
+    margin: 0;
+}
+
+/* Ensures tiles are visible while dragging around screen */
+.ui-draggable-dragging {
+    overflow: visible !important; 
+    z-index: 9999 !important; 
+    position: absolute !important;
+}

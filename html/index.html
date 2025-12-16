@@ -1,0 +1,52 @@
+<!--
+File: index.html
+GUI Assignment: One-Line Scrabble with Drag-and-Drop
+Nancy Vi, UMass Lowell Computer Science, Nancy_Vi@student.uml.edu
+Copyright (c) 2025 by Nancy. All rights reserved.
+
+Description: This is the html file for assignment 5, it contains the structures to make an interactive game of one-lined scrabble.
+The resulting output creates a game board and tile rack from which the player can drag and drop letter tiles onto the board and receive 
+points based on what word they submitted. Purpose of the assignment is to make an interactive game that utilizes all the methods that have 
+been introduced throughout the semester.
+Updated by NV on December 17, 2025 at 11:59 PM
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble Drag-and-Drop</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SCRABBLE</h1>
+    </header>
+
+    <div id="controls">
+        <div id="current-score">Current Score: <span id="word-score-value">0</span></div>
+        <div id="total-score">Total Score: <span id="total-score-value">0</span></div>
+        <button id="submit-word">Submit Word</button>
+        <button id="restart-game">Reset Game</button>
+    </div>
+    
+   
+    <div id="scrabble-board">
+        </div>
+
+    <div id="tile-rack">
+        </div>
+    
+    <!--CDN links for jQuery and jQuery UI, along with .js file from Jesse M. Heines that contains the data structure of the tiles -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
