@@ -96,7 +96,7 @@ function createTile(letter, value, tileId) {
         tileFileName = `Scrabble_Tile_${letter}.jpg`;
     }
 
-    const fullPath = `../graphics_data/${tileFileName}`;
+    const fullPath = `graphics_data/${tileFileName}`;
 
     const $tile = $('<div>')
         .addClass('tile')
@@ -361,3 +361,4 @@ function clearBoard() {
     boardState = new Array(BOARD_SIZE).fill(null);
     $('#word-score-value').text('0');
 }
+
